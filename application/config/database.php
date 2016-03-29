@@ -1,10 +1,10 @@
 <?php
 
 // Database Switch
-define ("DB", false);
+define ("DB", true);
 
 // Database Details
-define ("DB_HOST",     "");
-define ("DB_NAME",     "");
-define ("DB_USERNAME", "");
+define ("DB_HOST",     "localhost");
+define ("DB_NAME",     "chatadmin");
+define ("DB_USERNAME", "root");
 define ("DB_PASSWORD", "");
