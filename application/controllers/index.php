@@ -1,8 +1,5 @@
 <?php
 
-/**
- * Default Controller of the EmmaPHP MVC Framework
- */
 class IndexController extends EmmaController
 {
 
@@ -22,18 +19,28 @@ class IndexController extends EmmaController
 
     }
 
-    public function settings()
+
+    public function getUserData(){
+
+        $this->getUsers = $this->UserModel->getAll();
+
+
+        $this->page("users");
+    }
+
+    public function addUserSubmit()
     {
         //Submit een nieuwe user naar de database
-        $this->users = new UsersTable ();
+        $this->users = new UsersTable();
 
         if ($this->post("addUserSubmit")) {
 
-            $firstname = $this->post("voorname");
-            $tussenvoegsel = $this->post("tuzzenvoegsel");
-            $lastname = $this->post("lastname");
-            $company = $this->post("company");
+            $firstname = $this->post("voornaam");
+            $tussenvoegsel = $this->post("tussenvoegsel");
+            $lastname = $this->post("achternaam");
+            $company = $this->post("bedrijf");
             $email = $this->post("email");
+
 
 
             $this->users->insert
@@ -54,35 +61,42 @@ class IndexController extends EmmaController
 
     }
 
+    public function getTicketData(){
 
-    public function addTicket()
+        $this->getTickets = $this->TicketModel->getAll();
+
+
+        $this->page("tickets");
+    }
+
+
+    public function addTicketSubmit()
     {
         //Submit een nieuwe ticket naar de database
 
-        $this->page ("add_ticket");
+        $this->tickets = new TicketsTable();
 
-        if ($this->post("addTicketSubmit")) {
 
-            die ("runned dit uberhaupt????");
+        if ($this->post("addTicketSubmit"))
+        {
 
             $this->tickets = new TicketsTable();
 
             $userid = $this->post("userid");
             $ticket = $this->post("ticket");
 
-            die (var_dump($userid . " - " . $ticket));
-
             $this->tickets->insert
             (
                 array
                 (
                     "user_id" => $userid,
-                    "ticket" => $ticket
+                    "ticket" => $ticket,
+                    "solved" => 0
 
                 )
             );
         }
-
+        $this->page("add_ticket");
     }
 
 }

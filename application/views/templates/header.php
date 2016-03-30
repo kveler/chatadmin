@@ -58,8 +58,8 @@
                 <ul class="nav nav-sidebar">
                     <li><a href="?c=index&m=page&a=dashboard">Dashboard <span class="sr-only">(current)</span></a></li>
                     <li><a href="?c=index&m=page&a=chats">Chats <span class="badge">0</span></a></li>
-                    <li><a href="?c=index&m=page&a=tickets">Tickets</a></li>
-                    <li><a href="?c=index&m=page&a=users">Users</a></li>
+                    <li><a href="?c=index&m=getTicketData">Tickets</a></li>
+                    <li><a href="?c=index&m=getUserData">Users</a></li>
                     <li><a href="?c=index&m=page&a=operators">Operators</a></li>
                     <li><a href="?c=index&m=page&a=settings">Settings</a></li>
                 </ul>
