@@ -10,8 +10,9 @@ class TicketModel extends EmmaModel {
 			*
 		FROM
 			tickets
-        ORDER BY
-            id DESC
+		ORDER BY
+		    solved ASC
+
 
 
 SQL;

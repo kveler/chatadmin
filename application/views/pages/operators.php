@@ -6,13 +6,16 @@
     <tr>
         <th>User ID</th>
         <th>Naam</th>
-        <th>Toegevoegd op</th>
         <th>Meer</th>
     </tr>
+
+    <?php foreach($this->operators as $operator) : ?>
+
     <tr>
-        <td>1</td>
-        <td>Dirk Jansen</td>
-        <td>29/9/2016</td>
+        <td><?= $operator->id ?></td>
+        <td><?= $operator->vnaam ?> <?php if($operator->tussenv != NULL ){echo $this->tussenv;} ?> <?= $operator->achternaam ?></td>
         <td><u>Klik</u></td>
     </tr>
+
+    <?php endforeach; ?>
 </table>

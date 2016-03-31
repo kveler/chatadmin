@@ -11,4 +11,4 @@
     </div>
     <input name="addTicketSubmit" type="submit" class="btn btn-default" />
 </form><br/>
-<a href="?c=index&m=page&a=tickets"><button class="btn btn-default">Terug</button></a>
+<a href="?c=index&m=getTicketData"><button class="btn btn-default">Terug</button></a>

@@ -19,6 +19,12 @@ class IndexController extends EmmaController
 
     }
 
+    public function getOperators(){
+        $this->operators = $this->UserModel->getOperators();
+
+        $this->page("operators");
+    }
+
 
     public function getUserData(){
 
@@ -65,7 +71,7 @@ class IndexController extends EmmaController
 
         $this->getTickets = $this->TicketModel->getAll();
 
-
+//    die(var_dump($this->getTickets));
         $this->page("tickets");
     }
 
@@ -75,6 +81,8 @@ class IndexController extends EmmaController
         //Submit een nieuwe ticket naar de database
 
         $this->tickets = new TicketsTable();
+
+        $t = time();
 
 
         if ($this->post("addTicketSubmit"))
@@ -91,7 +99,8 @@ class IndexController extends EmmaController
                 (
                     "user_id" => $userid,
                     "ticket" => $ticket,
-                    "solved" => 0
+                    "solved" => 0,
+                    "date" => $t
 
                 )
             );

@@ -8,25 +8,19 @@
         <th>Naam</th>
         <th>Datum</th>
         <th>Ticket</th>
+        <th>Opgelost?</th>
     </tr>
 
     <?php foreach($this->getTickets as $ticket) : ?>
 
         <tr>
-            <td><?php $ticket->id    ?></td>
-            <td><?php $ticket->user_id ?></td>
-            <td> </td>
-            <td><?php $ticket->ticket ?></td>
+            <td><?= $ticket->id    ?></td>
+            <td><?= $ticket->user_id ?></td>
+            <td><?php $t = $ticket->date; echo(date("d-m-Y",$t)); ?></td>
+            <td><?php echo substr($ticket->ticket, 0,50). '...'; ?></td>
+            <td><?php if($ticket->solved == 1){echo"<span class='glyphicon glyphicon-ok'></span>";}else{echo"<span class='glyphicon glyphicon-remove'></span>";} ?></td>
             <td><u>Klik</u></td>
         </tr>
 
     <?php endforeach; ?>
-
-
-    <tr>
-        <td>1</td>
-        <td>Dirk Jansen</td>
-        <td>29/3/2016</td>
-        <td><u>Klik</u></td>
-    </tr>
 </table>

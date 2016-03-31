@@ -16,4 +16,21 @@ SQL;
 
         return $this->fetchAll ($sql);
     }
+
+    public function getOperators(){
+        $sql = <<<SQL
+
+		SELECT
+			*
+		FROM
+			users
+        WHERE
+            rechten=1
+
+
+SQL;
+
+
+        return $this->fetchAll ($sql);
+    }
 }
