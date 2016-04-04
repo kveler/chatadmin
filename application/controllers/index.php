@@ -19,10 +19,46 @@ class IndexController extends EmmaController
 
     }
 
-    public function getOperators(){
-        $this->operators = $this->UserModel->getOperators();
+    public function getOperatorsData(){
+        $this->getOperators = $this->OperatorsModel->getAll();
 
         $this->page("operators");
+    }
+
+    public function addOperatorSubmit()
+    {
+
+
+        //Submit een nieuwe user naar de database
+        $this->operators = new OperatorsTable();
+
+        if ($this->post("addOperatorSubmit")) {
+            $firstname = $this->post("voornaam");
+            $tussenvoegsel = $this->post("tussenvoegsel");
+            $lastname = $this->post("achternaam");
+            $email = $this->post("email");
+            $inlognaam = $this->post("inlognaam");
+            $wachtwoord = sha1($this->post("wachtwoord"));
+
+
+
+            $this->operators->insert
+            (
+                array
+                (
+                    "firstname" => $firstname,
+                    "middlename" => $tussenvoegsel,
+                    "lastname" => $lastname,
+                    "mail" => $email,
+                    "password" => $wachtwoord,
+                    "username" => $inlognaam
+                )
+            );
+
+        }
+        $this->page("add_operator");
+
+
     }
 
 

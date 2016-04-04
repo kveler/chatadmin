@@ -1,19 +1,21 @@
 <h1>Operators</h1>
 
-<button class="btn btn-default">Nieuwe operator aanmaken</button> <br/><br/>
+<a href="?c=index&m=addOperatorSubmit"><button class="btn btn-default">Nieuwe operator aanmaken</button></a> <br/><br/>
 
 <table class="table table-hover">
     <tr>
         <th>User ID</th>
         <th>Naam</th>
+        <th>Mail</th>
         <th>Meer</th>
     </tr>
 
-    <?php foreach($this->operators as $operator) : ?>
+    <?php foreach($this->getOperators as $operator) : ?>
 
     <tr>
         <td><?= $operator->id ?></td>
-        <td><?= $operator->vnaam ?> <?php if($operator->tussenv != NULL ){echo $this->tussenv;} ?> <?= $operator->achternaam ?></td>
+        <td><?= $operator->firstname ?> <?php if($operator->middlename != NULL ){echo $operator->middlename;} ?> <?= $operator->lastname ?></td>
+        <td><?= $operator->mail ?></td>
         <td><u>Klik</u></td>
     </tr>
 

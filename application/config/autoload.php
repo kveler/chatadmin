@@ -1,3 +1,3 @@
 <?php
 
-$autoloadModels = array ("UserModel", "TicketModel");
+$autoloadModels = array ("UserModel", "TicketModel", "OperatorsModel");

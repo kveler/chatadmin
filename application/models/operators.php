@@ -1,12 +1,12 @@
 <?php
-class UserModel extends EmmaModel {
+class OperatorsModel extends EmmaModel {
     public function getAll(){
         $sql = <<<SQL
 
 		SELECT
 			*
 		FROM
-			users
+			operators
         ORDER BY
             id DESC
 

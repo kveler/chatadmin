@@ -60,7 +60,7 @@
                     <li><a href="?c=index&m=page&a=chats">Chats <span class="badge">0</span></a></li>
                     <li><a href="?c=index&m=getTicketData">Tickets</a></li>
                     <li><a href="?c=index&m=getUserData">Users</a></li>
-                    <li><a href="?c=index&m=getOperators">Operators</a></li>
+                    <li><a href="?c=index&m=getOperatorsData">Operators</a></li>
                     <li><a href="?c=index&m=page&a=settings">Settings</a></li>
                 </ul>
                 <!-- <ul class="nav nav-sidebar">
