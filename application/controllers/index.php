@@ -70,6 +70,13 @@ class IndexController extends EmmaController
         $this->page("users");
     }
 
+    public function getOneUserData($id){
+
+        $this->user = $this->UserModel->get ($id);
+
+        $this->page("show_user");
+    }
+
     public function addUserSubmit()
     {
         //Submit een nieuwe user naar de database
@@ -93,7 +100,8 @@ class IndexController extends EmmaController
                     "tussenv" => $tussenvoegsel,
                     "achternaam" => $lastname,
                     "bedrijf" => $company,
-                    "email" => $email
+                    "email" => $email,
+                    "aangemaakt" => time()
                 )
             );
 
@@ -107,8 +115,15 @@ class IndexController extends EmmaController
 
         $this->getTickets = $this->TicketModel->getAll();
 
-//    die(var_dump($this->getTickets));
         $this->page("tickets");
+    }
+
+    public function getOneTicketData($id){
+
+        $this->ticket = $this->TicketModel->get ($id);
+        
+
+        $this->page("show_ticket");
     }
 
 

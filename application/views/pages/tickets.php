@@ -15,11 +15,11 @@
 
         <tr>
             <td><?= $ticket->id    ?></td>
-            <td><?= $ticket->user_id ?></td>
+            <td><?= $ticket->vnaam ?></td>
             <td><?php $t = $ticket->date; echo(date("d-m-Y",$t)); ?></td>
             <td><?php echo substr($ticket->ticket, 0,50). '...'; ?></td>
             <td><?php if($ticket->solved == 1){echo"<span class='glyphicon glyphicon-ok'></span>";}else{echo"<span class='glyphicon glyphicon-remove'></span>";} ?></td>
-            <td><u>Klik</u></td>
+            <td><a href="?c=index&m=getOneTicketData&a=<?= $ticket->id ?>">Klik</a></td>
         </tr>
 
     <?php endforeach; ?>

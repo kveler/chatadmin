@@ -10,7 +10,6 @@
         <th>Bedrijf</th>
         <th>Meer</th>
     </tr>
-
     <?php foreach($this->getUsers as $user) : ?>
 
         <tr>
@@ -18,7 +17,7 @@
             <td><?= $user->vnaam ?></td>
             <td><?= $user->achternaam ?></td>
             <td><?= $user->bedrijf ?></td>
-            <td><u>Klik</u></td>
+            <td><a href="?c=index&m=getOneUserData&a=<?= $user->id ?>">Klik</a></td>
         </tr>
 
     <?php endforeach; ?>
