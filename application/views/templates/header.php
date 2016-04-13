@@ -35,15 +35,16 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="?c=index&m=page&a=dashboard">Chat panel</a>
+                <a class="navbar-brand" href="?c=dashboard&m=page&a=dashboard">Chat panel</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="?c=index&m=page&a=dashboard">Dashboard</a></li>
-                    <li><a href="?c=index&m=page&a=settings">Settings</a></li>
-                    <li><a href="?c=index&m=page&a=profile">Profile</a></li>
-                    <li><a href="?c=index&m=page&a=help">Help</a></li>
-                    <li><a href="?c=index&m=page&a=logout">Logout</a></li>
+                    <li><a>Welkom <?php if ($naam = Session::get ("naam")){ echo $naam;} ?></a></li>
+                    <li><a href="?c=dashboard&m=page&a=dashboard">Dashboard</a></li>
+                    <li><a href="?c=dashboard&m=page&a=settings">Settings</a></li>
+                    <li><a href="?c=dashboard&m=page&a=profile">Profile</a></li>
+                    <li><a href="?c=dashboard&m=page&a=help">Help</a></li>
+                    <li><a href="?c=index&m=page&m=logout">Logout</a></li>
                 </ul>
                <!-- <form class="navbar-form navbar-right">
                    SEARCH BAR     <input type="text" class="form-control" placeholder="Search...">
@@ -56,12 +57,12 @@
         <div class="row">
             <div class="col-sm-3 col-md-2 sidebar">
                 <ul class="nav nav-sidebar">
-                    <li><a href="?c=index&m=page&a=dashboard">Dashboard <span class="sr-only">(current)</span></a></li>
-                    <li><a href="?c=index&m=page&a=chats">Chats <span class="badge">0</span></a></li>
-                    <li><a href="?c=index&m=getTicketData">Tickets</a></li>
-                    <li><a href="?c=index&m=getUserData">Users</a></li>
-                    <li><a href="?c=index&m=getOperatorsData">Operators</a></li>
-                    <li><a href="?c=index&m=page&a=settings">Settings</a></li>
+                    <li><a href="?c=dashboard&m=page&a=dashboard">Dashboard <span class="sr-only">(current)</span></a></li>
+                    <li><a href="?c=dashboard&m=page&a=chats">Chats <span class="badge">0</span></a></li>
+                    <li><a href="?c=ticket&m=getTicketData">Tickets</a></li>
+                    <li><a href="?c=user&m=getUserData">Users</a></li>
+                    <li><a href="?c=operator&m=getOperatorsData">Operators</a></li>
+                    <li><a href="?c=dashboard&m=page&a=settings">Settings</a></li>
                 </ul>
                 <!-- <ul class="nav nav-sidebar">
                     <li><a href="">Nav item</a></li>

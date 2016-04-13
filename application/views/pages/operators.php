@@ -1,6 +1,6 @@
 <h1>Operators</h1>
 
-<a href="?c=index&m=addOperatorSubmit"><button class="btn btn-default">Nieuwe operator aanmaken</button></a> <br/><br/>
+<a href="?c=operator&m=addOperatorSubmit"><button class="btn btn-default">Nieuwe operator aanmaken</button></a> <br/><br/>
 
 <table class="table table-hover">
     <tr>

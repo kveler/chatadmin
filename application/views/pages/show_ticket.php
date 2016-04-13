@@ -9,4 +9,8 @@
 
 <br/> <br/>
 
-<a href="?c=index&m=getTicketData"><button class="btn btn-default">Terug</button></a>
+<?php if($this->ticket->solved == 0){echo '<a href="?c=ticket&m=solveTicket&a=' . $this->ticket->id . '"><button class="btn btn-default">Opgelost!</button></a>';}?>
+
+<br/>
+
+<a href="?c=ticket&m=getTicketData"><button class="btn btn-default">Terug</button></a>

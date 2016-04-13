@@ -1,6 +1,6 @@
 <h1>Tickets</h1>
 
-<a href="?c=index&m=addTicketSubmit"><button class="btn btn-default">Nieuwe ticket aanmaken</button></a> <br/><br/>
+<a href="?c=ticket&m=addTicketSubmit"><button class="btn btn-default">Nieuwe ticket aanmaken</button></a> <br/><br/>
 
 <table class="table table-hover">
     <tr>
@@ -18,8 +18,8 @@
             <td><?= $ticket->vnaam ?></td>
             <td><?php $t = $ticket->date; echo(date("d-m-Y",$t)); ?></td>
             <td><?php echo substr($ticket->ticket, 0,50). '...'; ?></td>
-            <td><?php if($ticket->solved == 1){echo"<span class='glyphicon glyphicon-ok'></span>";}else{echo"<span class='glyphicon glyphicon-remove'></span>";} ?></td>
-            <td><a href="?c=index&m=getOneTicketData&a=<?= $ticket->id ?>">Klik</a></td>
+            <td><?php if($ticket->solved == 1){echo"<span class='glyphicon glyphicon-ok'></span>";}else{echo"<a href=\"?c=ticket&m=solveTicket&a=$ticket->id\"<span class='glyphicon glyphicon-remove'></span>";} ?></td>
+            <td><a href="?c=ticket&m=getOneTicketData&a=<?= $ticket->id ?>">Klik</a></td>
         </tr>
 
     <?php endforeach; ?>

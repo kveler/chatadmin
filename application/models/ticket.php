@@ -13,7 +13,7 @@ class TicketModel extends EmmaModel {
 		INNER JOIN
 		    users
 		ON 
-		    tickets.user_id=users.id
+		    users.user_id=tickets.user_id
 		ORDER BY
 		    solved ASC
 
@@ -32,8 +32,13 @@ SQL;
 			*
 		FROM
 			tickets
+		LEFT JOIN
+		    users
+		ON 
+		    tickets.user_id=users.user_id
 	    WHERE
-	        id = ?
+	        tickets.id = ?
+
 	        
 	    LIMIT 1;
 

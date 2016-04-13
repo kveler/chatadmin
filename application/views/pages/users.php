@@ -1,6 +1,6 @@
 <h1>Users</h1>
 
-<a href="?c=index&m=addUserSubmit"><button class="btn btn-default">Zelf user toevoegen</button></a> <br/><br/>
+<a href="?c=user&m=addUserSubmit"><button class="btn btn-default">Zelf user toevoegen</button></a> <br/><br/>
 
 <table class="table table-hover">
     <tr>
@@ -13,11 +13,11 @@
     <?php foreach($this->getUsers as $user) : ?>
 
         <tr>
-            <td><?= $user->id ?></td>
+            <td><?= $user->user_id ?></td>
             <td><?= $user->vnaam ?></td>
             <td><?= $user->achternaam ?></td>
             <td><?= $user->bedrijf ?></td>
-            <td><a href="?c=index&m=getOneUserData&a=<?= $user->id ?>">Klik</a></td>
+            <td><a href="?c=user&m=getOneUserData&a=<?= $user->user_id ?>">Klik</a></td>
         </tr>
 
     <?php endforeach; ?>

@@ -1,5 +1,7 @@
 <h1>User</h1>
 
+<strong>ID</strong><br/>
+<?= $this->user->user_id ?> <br/><br/>
 <strong>Voornaam</strong><br/>
 <?= $this->user->vnaam ?> <br/><br/>
 <strong>Tussenvoegsel</strong><br/>
@@ -18,4 +20,4 @@
 
 <br/> <br/>
 
-<a href="?c=index&m=getUserData"><button class="btn btn-default">Terug</button></a>
+<a href="?c=user&m=getUserData"><button class="btn btn-default">Terug</button></a>

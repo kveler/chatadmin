@@ -8,7 +8,7 @@ class UserModel extends EmmaModel {
 		FROM
 			users
         ORDER BY
-            id DESC
+            user_id DESC
 
 
 SQL;
@@ -25,7 +25,7 @@ SQL;
 		FROM
 			users
 	    WHERE
-	        id = ?
+	        user_id = ?
 	        
 	    LIMIT 1;
 

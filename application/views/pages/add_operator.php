@@ -27,4 +27,4 @@
     </div>
     <input name="addOperatorSubmit" type="submit" class="btn btn-default">
 </form><br/>
-<a href="?c=index&m=getOperatorsData"><button class="btn btn-default">Terug</button></a>
+<a href="?c=operator&m=getOperatorsData"><button class="btn btn-default">Terug</button></a>

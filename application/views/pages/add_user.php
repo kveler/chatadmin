@@ -23,4 +23,4 @@
     </div>
     <input name="addUserSubmit" type="submit" class="btn btn-default">
 </form><br/>
-<a href="?c=index&m=getUserData"><button class="btn btn-default">Terug</button></a>
+<a href="?c=user&m=getUserData"><button class="btn btn-default">Terug</button></a>
