@@ -58,8 +58,8 @@
             <div class="col-sm-3 col-md-2 sidebar">
                 <ul class="nav nav-sidebar">
                     <li><a href="?c=dashboard&m=page&a=dashboard">Dashboard <span class="sr-only">(current)</span></a></li>
-                    <li><a href="?c=dashboard&m=page&a=chats">Chats <span class="badge">0</span></a></li>
-                    <li><a href="?c=ticket&m=getTicketData">Tickets</a></li>
+                    <li><a href="?c=chat&m=page&m=getChatData">Chats <span class="badge"><?= $this->ChatModel->countAll()->allez; ?></span></a></li>
+                    <li><a href="?c=ticket&m=getTicketData">Tickets <span class="badge"><?= $this->TicketModel->countAll()->allez; ?></span></a></li>
                     <li><a href="?c=user&m=getUserData">Users</a></li>
                     <li><a href="?c=operator&m=getOperatorsData">Operators</a></li>
                     <li><a href="?c=dashboard&m=page&a=settings">Settings</a></li>

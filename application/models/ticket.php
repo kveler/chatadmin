@@ -48,4 +48,21 @@ SQL;
 
         return $this->fetch ($sql, array ($id));
     }
+
+    public function countAll(){
+        $sql = <<<SQL
+
+		SELECT
+			COUNT(*) AS allez
+		FROM
+			tickets
+		WHERE
+		  solved = 0
+
+
+SQL;
+
+
+        return $this->fetch ($sql);
+    }
 }

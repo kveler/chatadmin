@@ -69,6 +69,8 @@ class TicketController extends EmmaController
                     "date" => $t
                 )
             );
+            $this->page("add_ticket_succes");
+            exit();
         }
         $this->page("add_ticket");
     }

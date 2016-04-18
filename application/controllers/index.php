@@ -23,34 +23,33 @@ class IndexController extends EmmaController
 
     public function CheckLogin(){
 
+        if(session::get("id")== false) {
 
-        if($this->post("CheckLogin")) {
-            error_reporting(0);
-            $operator = new OperatorsTable();
+            if ($this->post("CheckLogin")) {
+                error_reporting(0);
+                $operator = new OperatorsTable();
 
-            $mail = $this->post("inputEmail");
-            $password = $this->post("inputPassword");
+                $mail = $this->post("inputEmail");
+                $password = $this->post("inputPassword");
 
-            $operator->find ("mail", $mail);
-
-
+                $operator->find("mail", $mail);
 
 
-            if($operator->mail == $mail && $operator->password == sha1($password)){
+                if ($operator->mail == $mail && $operator->password == sha1($password)) {
 
-                Session::set ("id", $operator->id);
-                Session::set ("naam", $operator->firstname);
+                    Session::set("id", $operator->id);
+                    Session::set("naam", $operator->firstname);
 
-                $this->redirect ("?c=dashboard");
+                    $this->redirect("?c=dashboard");
+                }
+
+                echo "Verkeerde inloggegevens, probeer het opnieuw.";
+
             }
-
-            echo"Verkeerde inloggegevens, probeer het opnieuw.";
-
-
-
-
         }
-
+        else{
+            $this->redirect("?c=dashboard");
+        }
 
     }
 

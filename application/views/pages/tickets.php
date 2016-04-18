@@ -9,6 +9,7 @@
         <th>Datum</th>
         <th>Ticket</th>
         <th>Opgelost?</th>
+        <th>Meer info</th>
     </tr>
 
     <?php foreach($this->getTickets as $ticket) : ?>

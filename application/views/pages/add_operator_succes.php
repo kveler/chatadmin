@@ -1,5 +1,8 @@
-<h1>User toevoegen</h1><br/>
+<h1>Operator toevoegen</h1><br/>
 
+<div class="alert alert-success" role="alert">
+    <strong>Nieuwe operator is toegevoegd!</strong>
+</div>
 
 <form method="post" style="width:40%">
     <div class="form-group">
@@ -15,13 +18,17 @@
         <input name="achternaam" type="text" class="form-control" id="achternaam" placeholder="Achternaam" required>
     </div>
     <div class="form-group">
-        <label>Bedrijf</label>
-        <input name="bedrijf" type="text" class="form-control" id="bedrijf" placeholder="Bedrijf">
-    </div>
-    <div class="form-group">
         <label>Emailadres</label>
         <input name="email" type="email" class="form-control" id="email" placeholder="Emailadres" required>
     </div>
-    <input name="addUserSubmit" type="submit" class="btn btn-default">
+    <div class="form-group">
+        <label>Inlognaam</label>
+        <input name="inlognaam" type="text" class="form-control" id="inlognaam" placeholder="Inlognaam" required>
+    </div>
+    <div class="form-group">
+        <label>Wachtwoord</label>
+        <input name="wachtwoord" type="password" class="form-control" id="wachtwoord" placeholder="Wachtwoord" required>
+    </div>
+    <input name="addOperatorSubmit" type="submit" class="btn btn-default">
 </form><br/>
-<a href="?c=user&m=getUserData"><button class="btn btn-default">Terug</button></a>
+<a href="?c=operator&m=getOperatorsData"><button class="btn btn-default">Terug</button></a>

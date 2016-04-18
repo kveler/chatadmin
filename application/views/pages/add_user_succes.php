@@ -1,5 +1,8 @@
 <h1>User toevoegen</h1><br/>
 
+<div class="alert alert-success" role="alert">
+    <strong>Nieuwe user is aangemaakt!</strong>
+</div>
 
 <form method="post" style="width:40%">
     <div class="form-group">

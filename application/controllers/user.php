@@ -62,10 +62,11 @@ class UserController extends EmmaController
                     "aangemaakt" => time()
                 )
             );
-
+            $this->page("add_user_succes");
+            exit();
         }
-        $this->page("add_user");
 
+        $this->page("add_user");
 
     }
 

@@ -46,6 +46,8 @@ class OperatorController extends EmmaController{
                     "username" => $inlognaam
                 )
             );
+            $this->page("add_operator_succes");
+            exit();
 
         }
         $this->page("add_operator");
