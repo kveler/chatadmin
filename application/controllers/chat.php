@@ -17,4 +17,8 @@ class ChatController extends EmmaController{
         $this->page("chats");
     }
 
+    public function createChat(){
+        
+    }
+
 }
